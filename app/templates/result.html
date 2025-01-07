@@ -1,0 +1,19 @@
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Extracted Text</h1>
+    <p>{{ extracted_text }}</p>
+    <a href="{{ url_for('index') }}">Go Back</a>
+</body>
+</html> {% endcomment %}
+
+                {% comment %} <form id="download-docx-form" action="/download_docx" method="post" style="display: none;">
+                  <input type="hidden" name="text" id="docx-text">
+                  <button class="download-docx-button" type="submit">Download</button>
+                </form> {% endcomment %}

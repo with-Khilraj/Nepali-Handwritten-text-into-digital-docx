@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nepali Text Recognition</title>
+    <link rel="stylesheet" href="/static/upload.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">
+          <img src="/static/assets/logo1.png" alt="Task Buddy Logo" />
+        </div>
+        <ul class="navbar-links">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/features">Features</a>
+          </li>
+          <li>
+            <a href="/faq">FAQs</a>
+          </li>
+          <li class="login-link">
+            <a href="/signin">Login</a>
+          </li>
+          <button type="submit" class="signup-button">
+            <a href="/signup">Start for free</a>
+          </button>
+        </ul>
+    </nav>
+
+      <div class="container">
+        <h1>The world's most powerful <span class="highlight">free online OCR</span></h1>
+        <p>Thousands of developers convert images and PDFs to actionable text with ....</p>
+        <div class="upload-section">
+            <div class="image-container" id="image-container">
+                <img id="selected-image" src="/static/assets/upload.png" alt="Your image will appear here">
+            </div>
+            <div class="text-container" id="text-container">
+                <textarea lang='ne' id="extracted-text" readonly>Your text will appear here.</textarea>
+                <form id="download-docx-form" action="/download_docx" method="post" style="display: none;">
+                  <input type="hidden" name="text" id="docx-text">
+                  <button class="download-docx-button" type="submit">Download</button>
+                </form>
+
+            </div>
+        </div>
+        <button id="upload-button">Upload File</button>
+        <input type="file" id="file-input" style="display: none;">
+        <div class="loading-bar" id="loading-bar" style="display: none;"></div>
+        <button id="reset-button" style="display: none;">Reset</button>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
